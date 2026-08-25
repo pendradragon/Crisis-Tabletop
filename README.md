@@ -31,3 +31,19 @@ npm start
 ```
 
 Open http://localhost:3000
+
+# Project Structure
+```
+/scenarios/		Disaster type and severity templates
+/engine/
+	scenarioLoader.js		Reads the scenario YAML files
+	claudeClient.js			Builds prompts, calls the Anthropic API, forces a structured JSON output via tool use
+	sessionStore.js			In-memory session state (see docs/SECURITY.md)
+
+/public/		Frontend (vanilla HTML/CSS/JS -- takes away the build step)
+/docs/
+	DISCLAIMER.md			Data handling and scope disclaimer shown/linked in-app
+	SECURITY.md				Notes for anyone entending stoarge, auth, or upload
+
+server.js		Express app tying it together
+```
