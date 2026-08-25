@@ -19,3 +19,15 @@ Actual Explaination: The idea came to me when I had a migraine. I thought it was
 6. This repeats for a fixed number of rounds (possibly user-defined, idrk yet). Ends with a resolution round.
 
 **Read `docs/DISCLAIMER.md` BEFORE RUNNING THIS WITH ANYTHING OTHER THAN A FICTIONAL ORGANIZATION PROFILE**
+
+# Setup
+```bash
+git clone <this repo> 
+cd crisis-tabletop
+npm install
+cp .env.example .env
+# edit .env and add your ANTHROPIC\_API\_KEY (https://console.anthropic.com/)
+npm start
+```
+
+Open http://localhost:3000
