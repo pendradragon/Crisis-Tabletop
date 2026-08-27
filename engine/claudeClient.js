@@ -5,20 +5,21 @@ const MODEL = process.env.CLAUDE_MODEL || "claude-sonnet-4-6";
 
 //Forces the tool to give us a predictable JSON file layout from Claude every turn. No need for free-form response parsing -- resposne format varies too much to do so effectively
 const TURN_TOOL{
-    name = "emit_turn",
-    description = "Emit the next term of the tabletop as a structured data.",
+    name: "emit_turn",
+    description:
+        "Emit the next beat of the tabletop exercise as structured data.",
     input_schema: {
         type: "object",
         properties: {
             narrative: {
                 type: "string",
                 description:
-          "2-4 short paragraphs describing what is happening right now, in the voice of an exercise controller/facilitator. Concrete and specific to the organization profile provided.",
+                "2-4 paragraphs describing what is happening right now, in the voice of an exercise controller/facilitator. Concrete and specific to the organization profile provided.",
             },
             consequences: {
                 type: "string",
                 description:
-          "What resulted from the team's last decision, in plain terms. Omit or leave empty on round 1.",
+                    "What resulted from the team's last decision, in plain terms. Omit or leave empty on round 1.",
             },
             situation: {
                 type: "object",
@@ -33,7 +34,7 @@ const TURN_TOOL{
                     affected_areas: { type: "array", items: { type: "string" } },
                 },
                 required: [
-          "elapsed_time",
+                "elapsed_time",
                 "severity_trend",
                 "media_attention",
                 "operational_impact",
