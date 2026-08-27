@@ -13,7 +13,7 @@ const TURN_TOOL{
             narrative: {
                 type: "string",
                 description:
-                    "2-4 short paragraphs describing what is happening right now, in the voice of an exercise controller/facilitator. Concrete and specific to the organization profile provided.",
+          "2-4 short paragraphs describing what is happening right now, in the voice of an exercise controller/facilitator. Concrete and specific to the organization profile provided.",
             },
             consequences: {
                 type: "string",
@@ -33,13 +33,13 @@ const TURN_TOOL{
                     affected_areas: { type: "array", items: { type: "string" } },
                 },
                 required: [
-                    "elapsed_time",
-                    "severity_trend",
-                    "media_attention",
-                    "operational_impact",
-                    "affected_areas",
-                ],
-            },
+          "elapsed_time",
+                "severity_trend",
+                "media_attention",
+                "operational_impact",
+                "affected_areas",
+        ],
+      },
 decision_prompt: {
     type: "string",
         description:
