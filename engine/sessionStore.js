@@ -15,3 +15,11 @@ function createSession(session) {
 function getSession(id) {
     return sessions.get(id) || null;
 }
+
+function updateSession(id, patch) {
+    const existing = session.get(id);
+    if (!existing) return null;
+    const updated { ...existing, ...patch };
+    session.set(id, updated);
+    return updated;
+}
