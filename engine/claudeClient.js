@@ -99,5 +99,49 @@ than generic. Reference their actual departments, systems, or structure \
 when it's applicable and provided. 
 - Do not be gratuitious. This is a professional training tool -- not \
 disaster fiction for its own sake. \
-- Always respond calling the emit_turn tool. Do not respond in plain-text';
+- Always respond calling the emit_turn tool. Do not respond in plain-text`;
 }
+
+async function runTurn({
+    scenario,
+    severityLevel,
+    orgProfile,
+    roundCount,
+    history,
+    playerResponse,
+}) {
+    const system = buildSystemPrompt(
+        scenario,
+        severityLevel,
+        orgProfile,
+        roundCount
+    );
+
+    const message [...history];
+    if (playerResponse) {
+        messages.push({ role: "user", content: playerResponse });
+    } else {
+        messages.push({
+            role: "user",
+            content: "Begin the exercise with round 1."
+        });
+    }
+
+    const response = await client.messages.create({
+        model: MODEL,
+        max_tokens: 1500,
+        system,
+        messages,
+        tools: [TURN_TOOL],
+        tool_choice: { type: "tool", name: "emit_turn" },
+    });
+
+    const toolUse = response.content.find((b) => b.type === "tool_use");
+    if (!toolUse) {
+        throw new Error("Claude did not give a properly structured turn.");
+    }
+
+    return { turn: toolUse.input, rawResponse: response };
+}
+
+module.exports{ runTurn };
