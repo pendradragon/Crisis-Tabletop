@@ -23,3 +23,7 @@ function updateSession(id, patch) {
     session.set(id, updated);
     return updated;
 }
+
+function deleteSession(id) {
+    return sessions.delete(id);
+}
