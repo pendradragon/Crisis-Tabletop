@@ -99,5 +99,5 @@ than generic. Reference their actual departments, systems, or structure \
 when it's applicable and provided. 
 - Do not be gratuitious. This is a professional training tool -- not \
 disaster fiction for its own sake. \
-- Always respond calling the emit_turn tool. Do not respond in plain-text;
+- Always respond calling the emit_turn tool. Do not respond in plain-text';
 }
