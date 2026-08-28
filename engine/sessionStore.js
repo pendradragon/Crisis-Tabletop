@@ -27,3 +27,5 @@ function updateSession(id, patch) {
 function deleteSession(id) {
     return sessions.delete(id);
 }
+
+module.exports = { createSession, getSession, updateSession, deleteSession };
