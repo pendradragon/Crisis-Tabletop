@@ -23,3 +23,11 @@ function listScenarios() {
             };
         });
 }
+
+function loadScenario(id) {
+    const file = path.join(SCENARIOS_DIR, `${id}.yaml`);
+    if (!fs.existsSync(file)) return null;
+    return yaml.load(fs.readFileSync(file, "utf8"));
+}
+
+module.exports = { listScenarios, loadScenario };
