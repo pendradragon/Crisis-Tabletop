@@ -34,3 +34,13 @@ function renderScenarioList() {
         container.appendChild(card);
     });
 }
+
+function selectScenario(id) {
+    state.selectedScenarioId = id;
+    state.selectedSeverity = null;
+    document.querySelectorAll("#scenarioList .option-card").forEach((c, i) => {
+        c.classList.toggle("selected", state.scenarios[i].id === id);
+    });
+    renderSeverityList();
+    validateStart();
+}
