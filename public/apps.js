@@ -44,3 +44,18 @@ function selectScenario(id) {
     renderSeverityList();
     validateStart();
 }
+
+function renderSeverityList() {
+    const scenario = state.scenarios.find((s) => s.id === state.selectedScenarioId);
+    const container = el("severityList");
+    container.innerHTML = "";
+    scenario.severity_levels.forEach((lvl) => {
+        const tick = document.createElement("div");
+        tick.className = "severity-tick";
+        tick.textContent = lvl.level;
+        tick.title = lvl.label;
+        tick.addEventListener("click", () => selectSeverity(lvl));
+        container.appendChild(tick);
+    });
+    el("severityCaption").textContent = "Select a severity level.";
+}
