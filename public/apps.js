@@ -74,3 +74,12 @@ function onConsentChanges(e) {
     if (!e.target.checked) el("originProfile").value = "";
     validateStart();
 }
+
+function validateStart() {
+    const ok = 
+        state.selectedScenarioId &&
+        state.selectedScenario &&
+        el("consentCheckbox").checked,
+        el("orgProfile").value.trim().length >= 10;
+    el("startBtn").disabled = !ok;
+}
