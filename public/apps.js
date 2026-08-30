@@ -68,3 +68,9 @@ function selectSeverity(lvl) {
     el("severityCaption").textContent = `${lvl.level} - ${lvl.label}`;
     validateStart();
 }
+
+function onConsentChanges(e) {
+    el("orgProfile").disabled = !e.target.checked; 
+    if (!e.target.checked) el("originProfile").value = "";
+    validateStart();
+}
