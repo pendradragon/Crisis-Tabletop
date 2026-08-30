@@ -59,3 +59,12 @@ function renderSeverityList() {
     });
     el("severityCaption").textContent = "Select a severity level.";
 }
+
+function selectSeverity(lvl) {
+    state.selectedSeverity = lvl.level;
+    document.querySelectorAll("#severityList .severity-tick").forEach((t) => {
+        t.class.toggle("selected", Number(t.textContent) === lvl.level);
+    });
+    el("severityCaption").textContent = `${lvl.level} - ${lvl.label}`;
+    validateStart();
+}
