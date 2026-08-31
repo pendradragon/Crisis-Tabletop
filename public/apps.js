@@ -116,3 +116,39 @@ async function startExercise() {
         setLoading(false);
     }
 }
+
+async function submitResponse() {
+    const input = el("responseInput");
+    const text = input.value.trim();
+    if (!text) return;
+
+    renderPlayerResponse(text);
+    input.value = "";
+    el("submitResponseBtn").disabled = true;
+    updateTicker("Awaiting Claude's assessment...");
+
+    try {
+        const res = await fetch("/api/session/turn", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ sessionId: state.sessionId, response: text }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Failed to advance exercise.");
+
+        state.round = data.round;
+        renderTurn(data.turn, data.turn.consequences);
+
+        if (data.turn.is_final_round) {
+            el("responseBar").hidden = true;
+            el("finishedBar").hidden = false;
+            updateTicker("Exercise complete");
+        } else {
+            updateTicker(`Round ${state.round} of ${state.roundCount}`);
+        }
+    } catch (err) {
+        renderSystemNote(`⚠ ${err.message}`);
+    } finally {
+        el("submitResponseBtn").disabled = false;
+    }
+}
