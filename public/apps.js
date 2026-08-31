@@ -83,3 +83,36 @@ function validateStart() {
         el("orgProfile").value.trim().length >= 10;
     el("startBtn").disabled = !ok;
 }
+
+async function startExercise() {
+    setLoading(true);
+    el("setupError").textContent = "";
+    try {
+        const res = await fetch("/api/session/start", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                scenarioId: state.selectedScenarioId,
+                severityLevel: state.selectedSeverity,
+                orgProfile: el("orgProfile").value.trim(),
+                consentGiven: el("consentCheckbox").checked,
+            }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Failed to start exerise.");
+
+        state.sessionId = data.sessionId;
+        state.round = data.round;
+        state.roundCount = data.roundCount;
+
+        el("setupPanel").style.display = "none";
+        el("logScroll").innerHTML = "";
+        renderTurn(data.turn, null);
+        el("responseData").hidden = false;
+        updateTicker(`Exercise running - ${state.roundCount}-round scenario`);
+    } catch (err) {
+        el("setupError").textContent = err.message;
+    } finally {
+        setLoading(false);
+    }
+}
