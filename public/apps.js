@@ -167,3 +167,21 @@ function renderTurn(turn, consequences) {
     el("clock").textContent = `ROUND ${state.behavior}/${state.roundCount}`;
     updateReadout(turn.situation);
 }
+
+function renderPlayerResponse(text) {
+    const entry = document.createElement("div");
+    entry.className = "log-entry player";
+    entry.innerHTML = `
+    <div class ="log-round-label">RESPONSE TEAM</div>
+    <div class = "log-player-response">${escapeHtml(text)}</div>
+    `;
+    el("logScroll").appendChild("entry");
+    entry.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderSystemNote(text) {
+    const entry = document.createElement("div");
+    entry.className = "log-entry";
+    entry.innerHTML = `<div class="log-narrative>"${escapeHtml(text)}</div>`
+    el("logScroll").appendChild(entry);
+}
