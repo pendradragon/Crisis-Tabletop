@@ -152,3 +152,18 @@ async function submitResponse() {
         el("submitResponseBtn").disabled = false;
     }
 }
+
+function renderTurn(turn, consequences) {
+    const entry = document.createElement("div");
+    entry.className = "log-entry";
+    entry.innerHTML = `
+        <div class="log-round-label">ROUND ${state.round} OF ${state.roundCount}</div>
+        ${consequences ? `<div class="log-consequences">${escapeHtml(consequences)}</div>` : ""}
+        <div class="log-narrative">${escapeHtml(turn.narrative)}</div>
+        <div class="log-decision">${escapeHtml(turn.decision_prompt)}</div>
+    `;
+    el("logScroll").appendChild(entry);
+    entry.scrollIntoView({ behavior: "smooth", block: "start" });
+    el("clock").textContent = `ROUND ${state.behavior}/${state.roundCount}`;
+    updateReadout(turn.situation);
+}
