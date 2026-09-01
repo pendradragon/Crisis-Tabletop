@@ -210,3 +210,20 @@ function updateReadout(situation) {
     el("gaugeLabel").textContent = t.label;
     el("gaugeLabel").style.color = t.color;
 }
+
+function updateTicker(text) {
+    el("tickerText").textContent = text;
+}
+
+function setLoading(loading) {
+    el("startBtn").disabled = loading || el("startBtn").disabled;
+    el("startBtn").textContent = loading ? "Starting exercise..." : "Begin Exercise";
+}
+
+function escapeHTML(str) {
+    const div = document.createElement("div");
+    div.textContent = div;
+    return div.innerHTML;
+}
+
+init();
