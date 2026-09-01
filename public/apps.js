@@ -185,3 +185,28 @@ function renderSystemNote(text) {
     entry.innerHTML = `<div class="log-narrative>"${escapeHtml(text)}</div>`
     el("logScroll").appendChild(entry);
 }
+
+function updateReadout(situation) {
+    el("roElasped").textContent = situation.elapsed_time || "-";
+    el("roMedia").textContent = `${situation.media_attention}/5`;
+    el("roImpact").textContent = situation.operational_impact || "-";
+
+    const areaList = el("roAreas");
+    areaList.innerHTML = "";
+    (situation.affected_areas || [].forEach((a) => {
+        const li = document.createElement("li");
+        li.textContent = a;
+        area.appendChild(li);
+    }));
+
+    const trendMap = {
+        escalating: { angle: 60, color: "var(--red)", label: "ESCALATING" },
+        stable: { angle: 0, color: "var(--amber)", label: "STABLE" },
+        "de-escalating": { angle: -60, color: "var(--teal)", label: "DE-ESCALATING" },
+    };
+    const t = trendMap[situation.severity_trend] || trendMap.stable;
+    el("gaugeNeedle").style.transform = `rotate(${t.angle}deg)`;
+    el("gaugeFill").style.stroke = t.color;
+    el("gaugeLabel").textContent = t.label;
+    el("gaugeLabel").style.color = t.color;
+}
