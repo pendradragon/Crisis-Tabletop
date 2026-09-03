@@ -8,3 +8,18 @@
    red     #D6483C  critical / escalating accent
    teal    #3FA796  stable / resolved accent
 */
+
+:root {
+    --bg: #0B0F14;
+    --surface: #131A22;
+    --surface-raised: #17202B;
+    --line: #223040;
+    --ink: #DCE3E8;
+    --muted: #6B7A85;
+    --amber: #E8A33D;
+    --red: #D6483C;
+    --teal: #3FA796;
+    --font-display: "IBM Plex Sans Condensed", sans-serif;
+    --font-body: "IBM Plex Sans", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+}
