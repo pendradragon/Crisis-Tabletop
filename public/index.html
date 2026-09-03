@@ -24,6 +24,48 @@
 
 <main class="layout">
 
+    <!--SETUP PANEL-->
+    <section class="panel setup-panel" id="setupPanel">
+        <h2 class="panel-title">Exercise Setup</h2>
+
+        <div class="field-group">
+            <label class="field-label">Disaster Type</label>
+            <div id="scenarioList" class="severity-track" role="radiogroup"></div>
+        </div>
+
+        <div class="field-group">
+            <label class="field-label">Severity</label>
+            <div id="severityList" class="severity-track" role="radiogroup"></div>
+            <p class="severity-caption" id="severityCaption">Select a disaster type first</p>
+        </div>
+
+        <div class="field-group disclaimer-block">
+            <h3 class="disclaimer-title">⚠ Before you describe your organization...</h3>
+            <p>
+                This tool sends whatever you enter below directly to Claude (Anthropic's API)
+                so it can generate a realistic and unique exercise. Treat this the same that you would treat and third-party
+                AI-service:
+            </p>
+            <ul>
+                <li>Do <strong>NOT</strong> paste real names, account numbers, credentials, security architecture details, or anything you wouldn't send in an email to an outisde vendor.</li>
+                <li>Prefer a <strong>fictional or generalized</strong> version of your organization.</li>
+                <li>Sessions are kept in <strong>server memory only</strong> and are not written to disk by this app -- you are responsible for what you type into the box below and where you run the application.</li>
+            </ul>
+            <label class="consent-row">
+                <input type="checkbox" id="consentCheckbox" />
+                <span>I understand and will NOT enter real sensitive organizational data.</span>
+            </label>
+        </div>
+
+        <div class="field-group" id="orgProfileGroup">
+            <label class="field-label" for="orgProfile">Organization Profile</label>
+            <p class="field-hint">Decribe the organization being exercised: size, sector, key departments, critical systems, geography. The more concrete the information provided, the better the exercise.</p>
+            <textarea id="orgProfile" rows="6" placeholder="e.g. A 450-employee regional hospital with three campuses, an on-prem EHR system, a small in-house IT team, and a 24/7 patient-facing call center..." disabled></textarea>
+        </div>
+
+        <button id="startBtn" class="btn btn-primary" disabled>Begin Exercise</button>
+        <p class="error-text" id="setupError"></p>
+    </section>
 </main>
 </body>
 </html>
