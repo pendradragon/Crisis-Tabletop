@@ -23,13 +23,37 @@
 
 <main class=" layout">
 
-    <!---SETUP SECTION-->
-    <section class=" panel setup-panel" id="setupPanel">
+    <!-- SETUP PANEL -->
+    <section class="panel setup-panel" id="setupPanel">
         <h2 class="panel-title">Exercise Setup</h2>
 
         <div class="field-group">
-            <label class="field-label">Disaster Type</label>
+            <label class="field-label">Disaster type</label>
             <div id="scenarioList" class="option-grid" role="radiogroup"></div>
+        </div>
+
+        <div class="field-group">
+            <label class="field-label">Severity</label>
+            <div id="severityList" class="severity-track" role="radiogroup"></div>
+            <p class="severity-caption" id="severityCaption">Select a disaster type first.</p>
+        </div>
+
+        <div class="field-group disclaimer-block">
+            <h3 class="disclaimer-title">⚠ Before you describe your organization</h3>
+            <p>
+                This tool sends whatever you enter below directly to Claude (Anthropic's API)
+                so it can generate a realistic exercise. Treat this the same as any third-party
+                AI service:
+            </p>
+            <ul>
+                <li>Do not paste real names, account numbers, credentials, security architecture details, or anything you wouldn't send in a normal email to an outside vendor.</li>
+                <li>Prefer a <strong>fictionalized or generalized</strong> version of your organization (e.g. "a 200-person regional healthcare provider" rather than your actual legal entity name and org chart).</li>
+                <li>Sessions are kept in server memory only and are not written to disk by this app — but you are responsible for what you type into the box below and where you run this server.</li>
+            </ul>
+            <label class="consent-row">
+                <input type="checkbox" id="consentCheckbox" />
+                <span>I understand the risk and will not enter real sensitive organizational data.</span>
+            </label>
         </div>
     </section>
 </main>
