@@ -23,3 +23,23 @@
     --font-body: "IBM Plex Sans", sans-serif;
     --font-mono: "IBM Plex Mono", monospace;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-attachment: fixed;
+    background-color: var(--bg);
+}
+
+body {
+    background-blend-mode: normal;
+}
