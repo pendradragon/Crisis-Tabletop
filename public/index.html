@@ -66,6 +66,22 @@
         <button id="startBtn" class="btn btn-primary" disabled>Begin Exercise</button>
         <p class="error-text" id="setupError"></p>
     </section>
+
+    <!--EXERCISE LOG-->
+    <section class="panel log-panel" id="logPanel">
+        <h2 class="panel-title">Exercise Log</h2>
+        <div class="log-scroll" id="logScroll">
+            <div class="empty-state">
+                <p>Configure a scenario on the left, then begin.</p>
+                <p class="muted">Claude will play the role of the exercise controller, generating each situation update and consequences based on your team's decision.'</p>
+            </div>
+        </div>
+
+        <div class="response-bar" id="responseBar" hidden>
+            <textarea id="responseInput" rows="3" placeholder="What does your team do? Describe each decision and who is making it"></textarea>
+            <button id="submitResponseBtn" class="btn btn-primary">Submit Response</button>
+        </div>
+    </section>
 </main>
 </body>
 </html>
