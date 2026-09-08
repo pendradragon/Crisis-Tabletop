@@ -86,6 +86,40 @@
             <button id="restartBtn" class="btn btn-secondary">Start a new exercise</button>
         </div>
     </section>
+
+    <!--SITUATION READOUT-->
+    <aside class="panel readout-panel" id="readoutPanel">
+        <h2 class="panel-title">Situation Readout</h2>
+
+        <div class="gauge-wrap">
+            <svg viewBox="0 0 200 120" class="gauge" id="severityGauge">
+                <path d="M 20 100 A 80 80 0 0 1 180 100" class="gauge-track" />
+                <path d="M 20 100 A 80 80 0 0 1 180 100" class="gauge-fill" id="gaugeFill" />
+                <line x1="100" y1="100" x2="100" y2="30" class="gauge-needle" id="gaugeNeedle" />
+                <circle cx="100" cy="100" r="6" class="gauge-hub" />
+            </svg>
+            <div class="gauge-label" id="gaugeLabel">-</div>
+            <div class="gauge-sublabel">SEVERITY TREND</div>
+        </div>
+
+        <dl class="readout-list" id="readoutList">
+            <div class="readout-row"><dt>Elasped time</dt><dd id="roElasped">-</dd></div>
+            <div class="readout-row"><dt>Media attention</dt><dd id="roMeda">-</dd></div>
+            <div class="readout-row"><dt>Operational impact</dt><dd id="roImpact">-</dd></div>
+        </dl>
+
+        <div class="affected-areas">
+            <div class="field-label">Affected areas</div>
+            <ul id="roAreas" class="area-list"></ul>
+        </div>
+    </aside>
+
 </main>
+
+<footer class="foot-note">
+    This application is a training tool only. Scenarios are AI-generated fiction for prepardedness practice. This application does NOT provide predictions or real guidance for an active incident.
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
