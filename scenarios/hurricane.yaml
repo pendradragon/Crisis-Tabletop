@@ -11,3 +11,9 @@ severity_levels:
       A tropcial storm watch has been issued. Landfall is in 72+ hours out and
       the forecast cone is still wide. There is no direct impact zone yet.
     escalation_rate: slow
+  2:
+    label: "Warning"
+    framing: >
+      A hurricane warning is in effect. Landfall is expected within 36-48 hours.
+      Evacuation orders are being issued in coastal zones. 
+    escalation_rate: moderate
