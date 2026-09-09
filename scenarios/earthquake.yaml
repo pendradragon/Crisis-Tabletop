@@ -21,3 +21,26 @@ description: >
         shelving, and minor employee injuries. Facilities are being visually inspected
         before staff are allowed back in the building.
       escalation_rate: moderate
+  3:
+    label: "Significant -- facility rendered unusable"
+    framing: >
+      At least one facility has sustained damage significant enough that 
+      it cannot be safely occupied pending a structural engineer's
+      assessment. Aftershocks continue. Some employee injuries have occurred.
+    escalation_rate: moderate
+  4:
+    label: "Severe -- regional infrastructure damage"
+    framing: >
+      Regional infrastructure (power, water, transportation, telecom) is
+      significanlty damaged. Multiple organizational facilities are
+      rendered unusable. Staff are having trouble reaching work or checking in due
+      to damaged roads and overloaded work phones. 
+    escalation_rate: fast
+  5:
+    label: "Catastrophic -- potential mass casualty event"
+    framing: >
+      A major, catastrophic earthquake has casued widespread structural
+      collaspe risk across the region. Search and rescue operations are
+      currently underway, community-wide. The organization does not yet have a full
+      picture of staff safety or facilty status. 
+    escalation_rate: fast
