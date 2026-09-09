@@ -22,3 +22,38 @@ severity_levels:
       properties in the region are beginning to flood. Staff communtes are
       becoming difficult in some areas.
     escalation_rate: moderate
+  3:
+    label: "Facility access impacted"
+    framing: >
+      Water has reached or entered the ground floor of at least one
+      organizational faciilties, or the routes to reach it are impassable.
+      Operations at that sight are effectively suspended. 
+    escalation_rate: moderate
+  4:
+    label: "Significant facility damage"
+    framing: >
+      Flooding has caused significant damage to at least one facility: ruined 
+      equipment, damaged physical records, contaminated water intrusion... Power
+      may have been cut as a safety precaution. Staff at or near the site may
+      need rescue or relocation.
+    escalation_rate: fast
+  5:
+    label: "Regional flooding emergency"
+    framing: >
+      Flooding is affecting the broader region simultaneously, straining
+      the emergency services and mutual aid programs. Multiple organization sites,
+      staff residences, and supply routes are affected at once, and water 
+      levels are still rising in some areas.
+    escalation_rate: fast
+
+inject_themes:
+  - protecting or evacuating physical records, inventory and equipment before water arrives. 
+  - staff safety is prioritized when floodwater rises faster than expected, including swift-water rescue scenarios
+  - commute and access disruption keeping staff away from accessing work or home
+  - contamination and habitability of a facility once the water recedes
+  - insurance, damage assessment(s), and business continuity invocation
+  - relocating operations to an unaffected site or setting up remote work
+  - coordinating with local emergency management on evacuation zones and road closures
+  - communications to customers or the public when service delivery is disrupted
+
+default_round_count: 5
