@@ -14,3 +14,10 @@ description: >
         suggst no significant damage, but facilities have not yet been
         formally inspected. Staff are shaken and distracted.
       escalation_rate: slow
+    2:
+      label: "Moderate -- localized damage"
+      framing: >
+        The earthquake caused localized damage: crakced walls, fallen
+        shelving, and minor employee injuries. Facilities are being visually inspected
+        before staff are allowed back in the building.
+      escalation_rate: moderate
