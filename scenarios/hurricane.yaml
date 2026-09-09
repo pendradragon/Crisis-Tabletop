@@ -2,4 +2,12 @@ id: hurricane
 label: "Hurricane / Major Storm"
 description: >
   A tropical cyclone is making landfall near the organization's primary
-  operating region, with escalating wind, storm surge, and flooding impacts
+  operating region, with escalating wind, storm surge, and flooding impacts.
+
+severity_levels:
+  1:
+    label: "Advisory"
+    framing: >
+      A tropcial storm watch has been issued. Landfall is in 72+ hours out and
+      the forecast cone is still wide. There is no direct impact zone yet.
+    escalation_rate: slow
