@@ -6,3 +6,11 @@ description: >
   region with no advance warning, followed by aftershocks and a cascading
   assessment of structural, life-safety, and continuity impacts.
 
+  severity_levels:
+    1:
+      label: "Minor event -- felt by employees, no real damage to infrastructure."
+      framing: >
+        A moderate earthquake was felt across the region. Inital reports
+        suggst no significant damage, but facilities have not yet been
+        formally inspected. Staff are shaken and distracted.
+      escalation_rate: slow
