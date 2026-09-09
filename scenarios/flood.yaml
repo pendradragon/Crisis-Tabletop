@@ -6,3 +6,12 @@ description: >
   failure, storm surge) causing rising water that threatens the
   organization's facilities, staff communtes, and physical records
   or equipment.
+
+severity_levels:
+  1:
+    label: "Flood watch"
+    framing: >
+      Heavy rainfall is forecasted and a flood watch is in effect for the 
+      region as a result. Waterways are running high, but no flooding has
+      occurred yet.
+    escalation_rate: slow
