@@ -17,3 +17,17 @@ severity_levels:
       A hurricane warning is in effect. Landfall is expected within 36-48 hours.
       Evacuation orders are being issued in coastal zones. 
     escalation_rate: moderate
+  3:
+    label: "Landfall - Category 2 equivalent"
+    framing: >
+      The storm has made landfall. Sustained winds, power outages, and
+      localized flooding are affecting the region. Roads are becoming
+      impassable.
+    escalation_rate: moderate
+  4:
+    label: "Landfall - Category 4 equivalent"
+    framing: >
+      Catastrophic landfall. Widespread power and communication outages, 
+      signifcant structural damage, and storm surge flooding in low-lying areas.
+      Emergency services are overwhelmed.
+    escalation_rate: fast
