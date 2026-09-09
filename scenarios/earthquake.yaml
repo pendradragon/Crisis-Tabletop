@@ -44,3 +44,15 @@ description: >
       currently underway, community-wide. The organization does not yet have a full
       picture of staff safety or facilty status. 
     escalation_rate: fast
+
+inject_themes:
+  - accounting for staff safety when normal means of communication are down
+  - structural inspection before re-occuying any facility (life-safety trumps continuity) 
+  - aftershock risk and the decision of when it's safe to re-enter a building
+  - activating alterate work locations or remote operations
+  - supply chain and logistics disruption from regional infrastructure
+  - employee welfare -- including staff whose homes or families are affected
+  - coordinating with building engineerings, landlords, or facilities management
+  - external communications when the full scope of damage is still unknown
+
+default_round_count: 5
