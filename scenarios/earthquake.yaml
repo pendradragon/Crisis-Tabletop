@@ -1,0 +1,8 @@
+id: earthquake
+label: "Earthquake"
+category: natural
+description: >
+  A significant earthquake striking the organization's primary operating
+  region with no advance warning, followed by aftershocks and a cascading
+  assessment of structural, life-safety, and continuity impacts.
+
