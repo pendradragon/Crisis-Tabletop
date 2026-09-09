@@ -15,3 +15,10 @@ severity_levels:
       region as a result. Waterways are running high, but no flooding has
       occurred yet.
     escalation_rate: slow
+  2:
+    label: "Flood warning -- localized"
+    framing: >
+      A flood warning is now in effect. Low-lying roads and some
+      properties in the region are beginning to flood. Staff communtes are
+      becoming difficult in some areas.
+    escalation_rate: moderate
