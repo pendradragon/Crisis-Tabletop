@@ -1,5 +1,6 @@
 id: hurricane
 label: "Hurricane / Major Storm"
+category: natural
 description: >
   A tropical cyclone is making landfall near the organization's primary
   operating region, with escalating wind, storm surge, and flooding impacts.
@@ -38,3 +39,15 @@ severity_levels:
       simultaneously. Infrastructure failures are cascading (power, water,
       telecom, transportation). Regional mutual aid is stretched thin.
     escalation_rate: fast
+
+inject_themes:
+  - facility and physical safety of in-person staff
+  - power and connectivity loss at key sites
+  - supply chain and logistics disruption
+  - customer-or-public-facing communications during an outage
+  - employee welfare (evacuation, shelter, unreachable staff)
+  - insurance, damage assessments, and business continuity invocation
+  - media and stakeholder inquires as the story develops
+
+
+default_round_count: 5
