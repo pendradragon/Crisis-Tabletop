@@ -1,0 +1,58 @@
+id: winter_storm
+label: "Severe Winter Storm"
+category: natural
+description: >
+  A major winter storm bringing heavy snow, ice, and/or extreme cold to
+  the organization's regoin, straining facilites, travel, utilities, and
+  staff safety over a sustained period rather than a single sharp event.
+
+severity_levels:
+  1:
+    label: "Winter storm watch"
+    framing: >
+      A significant winter storm is forecast to arrive within 48-72
+      hours. Planning is underway for possible closures or remote-work
+      activitation.
+    escalation_rate: slow
+  2:
+    label: "Storm arriving -- travelling is discouraged"
+    framing: >
+      The storm has arrived. Roads are becoming hazardous, and local
+      authorities are discouraging non-essential travel. Some staff are
+      unable to safely communte.
+    escalation_rate: moderate
+  3:
+    label: "Facility impact -- power/heat at risk"
+    framing: >
+      Heavy snow load, ice accumlation, or extreme cold is threatening
+      facility integrity (roof load, frozen pipes) or utilities (power, 
+      heat). Any staff who remained on-site need a safety plan.
+    escalation_rate: moderate
+  4:
+    label: "Extended outage -- multi-day"
+    framing: >
+      A power or heat outage has extended past 24 hours at one or more
+      facilities. Staff or on-site individuals may be risk from cold
+      exposure. Roads remain largely impassable, slowly any response or
+      resupply.
+    escalation_rate: fast
+  5:
+    label: "Regional infrastructure failure"
+    framing: >
+      The storm has caused widespread, multi-day regional infrastructure
+      failure (power grid strain or failure, water main breaks from
+      freezing, impassable regional roadways). Emergency services and
+      utility crews are stretched across the whole region.
+    escalation_rate: fast
+
+inject_themes:
+  - deciding whether to close facilities and how much advance notice is given to staff
+  - safety of any staff who are stranded on-site or unable to get home
+  - frozen pipes, roof load, and other facility integrty risks from sustained cold or snow load
+  - supply chain disruption (deliveries, fulel, food/water if sheltering staff on-site)
+  - remote work activitation and its limits when staff also lose power or internet at home
+  - employee welfare, especially for staff without reliable transportation
+  - prioritizing which operations must continue vs. which can pause without causing unrecoverable harm
+  - communications when the situation is expected to last days, not hours
+
+default_round_count: 5

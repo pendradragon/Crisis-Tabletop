@@ -1,0 +1,58 @@
+id: earthquake
+label: "Earthquake"
+category: natural
+description: >
+  A significant earthquake striking the organization's primary operating
+  region with no advance warning, followed by aftershocks and a cascading
+  assessment of structural, life-safety, and continuity impacts.
+
+  severity_levels:
+    1:
+      label: "Minor event -- felt by employees, no real damage to infrastructure."
+      framing: >
+        A moderate earthquake was felt across the region. Inital reports
+        suggst no significant damage, but facilities have not yet been
+        formally inspected. Staff are shaken and distracted.
+      escalation_rate: slow
+    2:
+      label: "Moderate -- localized damage"
+      framing: >
+        The earthquake caused localized damage: crakced walls, fallen
+        shelving, and minor employee injuries. Facilities are being visually inspected
+        before staff are allowed back in the building.
+      escalation_rate: moderate
+  3:
+    label: "Significant -- facility rendered unusable"
+    framing: >
+      At least one facility has sustained damage significant enough that 
+      it cannot be safely occupied pending a structural engineer's
+      assessment. Aftershocks continue. Some employee injuries have occurred.
+    escalation_rate: moderate
+  4:
+    label: "Severe -- regional infrastructure damage"
+    framing: >
+      Regional infrastructure (power, water, transportation, telecom) is
+      significanlty damaged. Multiple organizational facilities are
+      rendered unusable. Staff are having trouble reaching work or checking in due
+      to damaged roads and overloaded work phones. 
+    escalation_rate: fast
+  5:
+    label: "Catastrophic -- potential mass casualty event"
+    framing: >
+      A major, catastrophic earthquake has casued widespread structural
+      collaspe risk across the region. Search and rescue operations are
+      currently underway, community-wide. The organization does not yet have a full
+      picture of staff safety or facilty status. 
+    escalation_rate: fast
+
+inject_themes:
+  - accounting for staff safety when normal means of communication are down
+  - structural inspection before re-occuying any facility (life-safety trumps continuity) 
+  - aftershock risk and the decision of when it's safe to re-enter a building
+  - activating alterate work locations or remote operations
+  - supply chain and logistics disruption from regional infrastructure
+  - employee welfare -- including staff whose homes or families are affected
+  - coordinating with building engineerings, landlords, or facilities management
+  - external communications when the full scope of damage is still unknown
+
+default_round_count: 5

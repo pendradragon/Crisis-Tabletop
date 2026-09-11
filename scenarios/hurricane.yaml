@@ -1,0 +1,53 @@
+id: hurricane
+label: "Hurricane / Major Storm"
+category: natural
+description: >
+  A tropical cyclone is making landfall near the organization's primary
+  operating region, with escalating wind, storm surge, and flooding impacts.
+
+severity_levels:
+  1:
+    label: "Advisory"
+    framing: >
+      A tropcial storm watch has been issued. Landfall is in 72+ hours out and
+      the forecast cone is still wide. There is no direct impact zone yet.
+    escalation_rate: slow
+  2:
+    label: "Warning"
+    framing: >
+      A hurricane warning is in effect. Landfall is expected within 36-48 hours.
+      Evacuation orders are being issued in coastal zones. 
+    escalation_rate: moderate
+  3:
+    label: "Landfall - Category 2 equivalent"
+    framing: >
+      The storm has made landfall. Sustained winds, power outages, and
+      localized flooding are affecting the region. Roads are becoming
+      impassable.
+    escalation_rate: moderate
+  4:
+    label: "Landfall - Category 4 equivalent"
+    framing: >
+      Catastrophic landfall. Widespread power and communication outages, 
+      signifcant structural damage, and storm surge flooding in low-lying areas.
+      Emergency services are overwhelmed.
+    escalation_rate: fast
+  5:
+    label: "Catastrophic / Multi-region"
+    framing: >
+      A historic, catastrophic storm affecting multiple regions
+      simultaneously. Infrastructure failures are cascading (power, water,
+      telecom, transportation). Regional mutual aid is stretched thin.
+    escalation_rate: fast
+
+inject_themes:
+  - facility and physical safety of in-person staff
+  - power and connectivity loss at key sites
+  - supply chain and logistics disruption
+  - customer-or-public-facing communications during an outage
+  - employee welfare (evacuation, shelter, unreachable staff)
+  - insurance, damage assessments, and business continuity invocation
+  - media and stakeholder inquires as the story develops
+
+
+default_round_count: 5

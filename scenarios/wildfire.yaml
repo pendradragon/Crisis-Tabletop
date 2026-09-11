@@ -1,0 +1,57 @@
+id: wildfire
+label: "Wildfire"
+category: natural
+description: >
+  A fast-moving wildfire is threatening the organization's facilities,
+  staff, and surrounding community with rapidly changing conditions
+  driven by wind, terrain, and containment progress.
+
+severity_levels:
+  1:
+    label: "Red flag warning"
+    framing: >
+      Extreme fire-weather conditions (low humidity, high wind, dry fuel)
+      are forecast for the region. No active fire yet, but conditions are
+      primed for rapid ignition and spread.
+    escalation_rate: slow
+  2:
+    label: "Fire reported -- nearby"
+    framing: >
+      A wildfire has ignited within the region and is actively spreading.
+      It is not yet an immediate threat to organizational facilities, but
+      containment is low and wind direction is a concern.
+    escalation_rate: moderate
+  3:
+    label: "Evacuation warning issued"
+    framing: >
+      Authorities have issued a pre-evacuation warning for the area
+      containing one or more organizational facilities. Smoke and ash are
+      affecting air quality and visiblity on-site.
+    escalation_rate: moderate
+  4:
+    label: "Evacuation order -- facility threatened"
+    framing: >
+      A mandatory evacuation order now covers at least one organizational
+      facility. Power may be shut off preemptively (public safety power
+      shutoff). Staff and any on-site visitors must leave immediately.
+    escalation_rate: fast
+  5:
+    label: "Facility loss / regional emergency"
+    framing: >
+      The fire has reached or destroyed organizational property, or
+      containment has failed regionally, triggering a broader state of
+      emergency. Multiple facilities, staff residences, or supply routes
+      may be affected simultaneously.
+    escalation_rate: fast
+
+inject_themes:
+  - immediate evacuation of staff, visitor, and any on-site inventory or animals
+  - smoke/air quality impact on continued operations at nearby (non-evacuated) sites
+  - preemptive power shutoffs and their operational impact
+  - employee welfare when staff and/or their families are personally evacuated
+  - relocating or standing up temporary operations at an alternate
+  - insurance, damage assessment, and business continuity invocation
+  - coordinating with local fire authorities and interpreting evacuation zone changes
+  - communications to staff, customers, and community stakeholders as conditions change hour to hour
+
+default_round_count: 5
