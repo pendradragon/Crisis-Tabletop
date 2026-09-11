@@ -1,0 +1,64 @@
+id: active_threat
+label: "Active Threat / Workplace Violence"
+category: human
+description: >
+  A safety threat to people at an organizational facility requiring
+  immediate protective action and coordination with law enforcement. This
+  scenario is deliberately kept at the organizational decision-making
+  level: communications, lockdown/evacuation protocol, reunification, and
+  aftermath support. It does not involve or require any tactical,
+  weapons, or attacker-behavior detail.
+
+severity_levels:
+  1:
+    label: "Unconfirmed report"
+    framing: >
+      An unconfirmed report of a potential threat has reached facility
+      security or management (e.g. a concerning tip, an unverified
+      911-adjacent alert in the area). Nothing is confirmed. Leadership
+      must decide how seriously to treat it and what precautionary steps,
+      if any, to take.
+    escalation_rate: slow
+  2:
+    label: "Confirmed threat -- precautionary lockdown"
+    framing: >
+      The threat has been confirmed as credible enough that facility
+      security has been initaited as a precautionary lockdown or shelter-in-place.
+      Law enforcement has been notified and is responding.
+    escalation_rate: moderate
+  3:
+    label: "Active situation -- facility in lockdown"
+    framing: >
+      The facility is in active lockdown. Staff have been ordered to shelter in place.
+      Law enforcement is on scene. Communication with people inside the
+      facility is limited. Families and the public are outside are beginning
+      to ask questions. 
+    escalation_rate: moderate
+  4:
+    label: "Situation resolving -- casualities possible"
+    framing: >
+      The facility has indicated the immediate threat is contained or
+      resolving. There may be injuries. Reunification of staff with
+      family, medical response, and initial fact-gathering are now the
+      priority, alongside managaging a fast-moving information environment.
+    escalation_rate: fast
+  5:
+    label: "Aftermath -- organization-wide impact"
+    framing: >
+      The immdiate thereat has pased, but the organization now faces
+      significant aftermath: supporting affected staff and families,
+      managaging intense media and public attention, coordinating with
+      investigators, and deciding how and when to resume operations.
+    escalation_rate: fast
+
+inject_themes:
+  - activating lockdown/shelter-in-place protocol and communicating it clearly under pressure
+  - coordingating with law enforcement as the on-scene authority, including handing over decision-making appropriately
+  - accounting for every staff member and visitor, and communicating with families who can't reach them
+  - managing communication when information is incomplete or actively wrong (rumors, social media, press)
+  - reunification logistics once an all-clear is given
+  - psychological first aid and longer-term support for affected staff
+  - deciding when and how to resume normal operations at the facility
+  - post-incident coordination with investigators and legal counsel
+
+default_round_count: 5
