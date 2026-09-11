@@ -1,0 +1,8 @@
+id: industrial_accident
+label: "Inductrial Accident / Hazmat Release"
+category: technological
+description: >
+  An accident equipment failure, chemical release, fire, or explosion
+  at an organizational facility, requiring immediate safety response and
+  raising longer-term regulatory and liability questions. Caused by
+  equipment failure or human error, not malicious intent.
