@@ -1,0 +1,56 @@
+id: ransomware
+label: "Ransomware / Cyber Exortion"
+category: technological
+description: >
+  A ransomware event affecting the organization's systems, escalating from
+  inital detection through containment, recovery, and public disclosure
+  decisions. This scenario is about organizational response and decision-making,
+  not attack mechanics.
+
+severity_levels:
+  1:
+    label: "Anomaly detected"
+    framing: >
+      Monitoring tools flage unusual encryption activity on a handful of
+      endpoints. No confirmed business impact yet. IT is investigating...
+    escalation_rate: slow
+  2:
+    label: "Confirmed incident -- contained scope"
+    framing: >
+      Ransomware is confirmed on a limited set of systems. A ransom note
+      has appeared. Affected systems have been isolated from the network.
+    escalation_rate: moderate
+  3:
+    label: "Spreading -- operational impact"
+    framing: >
+      The incident has spread to additional systems, including a
+      business-critical applicaiton. Some operations are degraded or
+      offline. Leadership has been notified.
+    escalation_rate: moderate
+  4: 
+    label: "Data exfiltration claimed"
+    framing: >
+      The attackers claim to have exfiltrated sensitive data and threaten
+      public releease unless payment is made. Legal, communications, and
+      executive leadership are now directly involved.
+    escalation_rate: fast
+  5:
+    label: "Public / regulatory exposure"
+    framing: >
+      News of the incident has reached the media. Regulatory
+      notification clocks may be ticking. Customers, partners, and
+      employees are asking questions faster than the organization can
+      verify facts.
+    escalation_rate: fast
+
+inject_themes:
+  - technical contaiment vs. business continuity trade-offs
+  - decision whether to pay ransom (framed at a policy/governance level; no technicla exploit detail provided)
+  - internal communication to employees
+  - external communications to customers, partners, regulators, and the media
+  - legal and regulatory notification obligations
+  - law enforcement engagement
+  - restoring operations from backups vs. verifying backup integrity first
+  - executive and board-level decision-making under pressure and uncertainty
+
+default_round_count: 5
