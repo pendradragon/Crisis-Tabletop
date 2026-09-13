@@ -16,3 +16,10 @@ severity_levels:
       safety staff are investigating and the area has been cordoned off
       as a precaution.
     escalation_rate: slow
+  2:
+    label: "Facility-wide evacuation"
+    framing: >
+      The incident (fire, spill, or release) has escalated enough to
+      require evaculating the immediate area within the facility. Facility
+      emergency response has been activated. 
+    escalation_rate: moderate
