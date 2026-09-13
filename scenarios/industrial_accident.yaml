@@ -6,3 +6,13 @@ description: >
   at an organizational facility, requiring immediate safety response and
   raising longer-term regulatory and liability questions. Caused by
   equipment failure or human error, not malicious intent.
+
+severity_levels:
+  1:
+    label: "Equipment malfunction -- contained"
+    framing: >
+      A piece of equipment has malfunctioned (e.g. a mechanical failure, 
+      minor chemical spill), but the issue appears to be contained. Facility
+      safety staff are investigating and the area has been cordoned off
+      as a precaution.
+    escalation_rate: slow
