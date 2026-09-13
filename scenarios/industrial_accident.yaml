@@ -23,3 +23,11 @@ severity_levels:
       require evaculating the immediate area within the facility. Facility
       emergency response has been activated. 
     escalation_rate: moderate
+  3:
+    label: "Facility-wide evacuation"
+    framing: >
+      The situation now requires evaculating the entire facility. Local
+      fire/hazmat response has been called. There may be injuries. Nearby
+      businesses or residents may also need to be notified depending on
+      the substance and wind conditions.
+    escalation_rate: moderate
