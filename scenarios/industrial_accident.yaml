@@ -31,3 +31,11 @@ severity_levels:
       businesses or residents may also need to be notified depending on
       the substance and wind conditions.
     escalation_rate: moderate
+  4:
+    label: "Off-site impact -- community notification"
+    framing: >
+      The incident has, or may have an off-site impact: airborne release,
+      water contnamination, or a blast radius extending past facility
+      boundaries. Local authorities are notifying nearby community
+      members and media attention is starting...
+    escalation_rate: fast
