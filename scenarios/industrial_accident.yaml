@@ -1,0 +1,49 @@
+id: industrial_accident
+label: "Inductrial Accident / Hazmat Release"
+category: technological
+description: >
+  An accident equipment failure, chemical release, fire, or explosion
+  at an organizational facility, requiring immediate safety response and
+  raising longer-term regulatory and liability questions. Caused by
+  equipment failure or human error, not malicious intent.
+
+severity_levels:
+  1:
+    label: "Equipment malfunction -- contained"
+    framing: >
+      A piece of equipment has malfunctioned (e.g. a mechanical failure, 
+      minor chemical spill), but the issue appears to be contained. Facility
+      safety staff are investigating and the area has been cordoned off
+      as a precaution.
+    escalation_rate: slow
+  2:
+    label: "Facility-wide evacuation"
+    framing: >
+      The incident (fire, spill, or release) has escalated enough to
+      require evaculating the immediate area within the facility. Facility
+      emergency response has been activated. 
+    escalation_rate: moderate
+  3:
+    label: "Facility-wide evacuation"
+    framing: >
+      The situation now requires evaculating the entire facility. Local
+      fire/hazmat response has been called. There may be injuries. Nearby
+      businesses or residents may also need to be notified depending on
+      the substance and wind conditions.
+    escalation_rate: moderate
+  4:
+    label: "Off-site impact -- community notification"
+    framing: >
+      The incident has, or may have an off-site impact: airborne release,
+      water contnamination, or a blast radius extending past facility
+      boundaries. Local authorities are notifying nearby community
+      members and media attention is starting...
+    escalation_rate: fast
+  5:
+    label: "Major incident -- regulatory and legal exposure"
+    framing: >
+      This is now a major incident with confirmed injuries, environmental
+      impact, and/or off-site harm. Regulatory agencies (e.g.
+      occupational safet, environmental protection) are opening
+      investigations. Legal and reputational exposure is significant.
+    escalation_rate: fast
