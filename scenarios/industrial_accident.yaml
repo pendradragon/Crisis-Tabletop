@@ -39,3 +39,11 @@ severity_levels:
       boundaries. Local authorities are notifying nearby community
       members and media attention is starting...
     escalation_rate: fast
+  5:
+    label: "Major incident -- regulatory and legal exposure"
+    framing: >
+      This is now a major incident with confirmed injuries, environmental
+      impact, and/or off-site harm. Regulatory agencies (e.g.
+      occupational safet, environmental protection) are opening
+      investigations. Legal and reputational exposure is significant.
+    escalation_rate: fast
